@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .centered-block {
+            width: 300px;
+            height: 200px;
+            background: #aaaaaa url("./imgs/scenery_1_landscape_300px.jpg") no-repeat;
+            margin: auto;
+        }
+
+        .d1 {
+            border: solid 1px red;
+            margin-left: 100px;
+        }
+
+        .p1 {
+            border: solid 1px green;
+            margin-left: inherit;
+        }
+    </style>
+</head>
+<body>
+<div class="centered-block">centered block</div>
+
+<div class="d1">
+    <p class="p1">inherited margin-left</p>
+</div>
+</body>
+</html>

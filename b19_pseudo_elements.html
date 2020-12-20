@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .d {
+            border: solid 1px gray;
+            margin-bottom: 10px;
+        }
+
+        p:nth-child(2) {
+            color: blue;
+        }
+
+        p:nth-last-child(2) {
+            color: red;
+        }
+
+        p:nth-of-type(2) {
+            text-decoration: line-through;
+        }
+
+        .d3 p:not(:nth-of-type(2)) {
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+<body>
+<div class="d d1">
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <b>second elem of my parent elem</b>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+</div>
+<div class="d d2">
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+</div>
+
+<div class="d d3">
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+</div>
+
+
+</body>
+</html>

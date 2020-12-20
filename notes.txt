@@ -1,0 +1,10 @@
+
+- None of the OTHER CSS border properties (which you will learn more about in the next chapters) will have ANY effect unless the border-style property is set!
+
+- Margin Collapse does not happen on left and right margins! Only top and bottom margins!
+
+- The overflow property only works for block elements with a specified height.
+
+- Absolute positioned elements are removed from the normal flow, and can overlap elements.
+
+- If an element is taller than the element containing it, and it is floated, it will overflow outside of its container. You can use the "clearfix" hack to fix this

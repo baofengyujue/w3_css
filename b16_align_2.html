@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .d1 {
+            line-height: 200px;
+            height: 200px;
+            border: solid 3px green;
+            margin-bottom: 30px;
+        }
+
+        .dp {
+            margin-top: 150px;
+        }
+
+        .dp p {
+            /*这里line-height为多少都ok，但不能不设置*/
+            /*不设置的话line-height就为父元素的200px了*/
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="d1">
+    一段文字，一段文字，一段文字
+</div>
+<div class="d1">
+    一段文字，一段文字，一段文字<br>
+    2段文字，2段文字，2段文字
+</div>
+
+<div class="d1 dp">
+    <p>
+        一段文字，一段文字，一段文字<br>
+        3段文字，3段文字，3段文字
+    </p>
+</div>
+</body>
+</html>

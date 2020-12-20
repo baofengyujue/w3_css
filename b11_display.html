@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .imgbox {
+            float: left;
+            text-align: center;
+            width: 200px;
+            border: solid 1px gray;
+            margin: 4px;
+            padding: 6px;
+        }
+
+        .imgbox p {
+            margin: .5em;
+            background-color: #eeeeee;
+            color: crimson;
+            font-family: Consolas, cursive;
+            white-space: nowrap;
+        }
+
+        button {
+            width: 100%;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            white-space: nowrap;
+            padding: 3px;
+            background-color: #4caf50;
+            color: white;
+            margin-top: .4em;
+        }
+
+        button:hover {
+            background-color: lightgray;
+            color: black;
+        }
+
+        img {
+            /*width: 100%;*/
+        }
+
+        #ib3 p {
+            background-color: inherit;
+            color: initial;
+        }
+    </style>
+</head>
+<body>
+<div class="imgbox" id="ib1">
+    <p>display: none</p>
+    <img src="./imgs/P1_大雨-150.png" alt="大雨">
+    <button onclick="removeElem()">移除</button>
+</div>
+<div class="imgbox" id="ib2">
+    <p>visibility: hidden</p>
+    <img src="./imgs/P3_灿烂的花-150.png" alt="花">
+    <button onclick="hideElem()">隐藏</button>
+</div>
+<div class="imgbox" id="ib3">
+    <p>reset</p>
+    <img src="./imgs/P2_欣怡拿着羽毛球-150.png" alt="欣怡">
+    <button onclick="resetElem()">重置</button>
+</div>
+
+<script>
+    function removeElem() {
+        document.getElementById("ib1").style.display = "none";
+    }
+    function hideElem() {
+        document.getElementById("ib2").style.visibility = "hidden";
+    }
+    function resetElem() {
+        document.getElementById("ib1").style.display = "block";
+        document.getElementById("ib2").style.visibility = "visible";
+    }
+</script>
+</body>
+</html>

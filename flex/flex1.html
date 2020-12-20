@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .flex-container {
+            background-color: dodgerblue;
+            display: flex;
+
+            /*The flex-direction property defines in which
+            direction the container wants to stack the flex
+             items.*/
+            /*竖列排列*/
+            /*flex-direction: column;*/
+            /*flex-direction: column-reverse;*/
+
+            /*横列排列*/
+            /*flex-direction: row;*/
+            /*flex-direction: row-reverse;*/
+
+            /*The wrap value specifies that the
+            flex items will wrap if necessary*/
+            /*--------------------------*/
+            /*flex-wrap: wrap;*/
+            /*flex-wrap: wrap-reverse;*/
+
+            /*The flex-flow property is a shorthand property
+             for setting both the flex-direction and
+             flex-wrap properties.*/
+            /*--------------------------*/
+            flex-flow: wrap-reverse row-reverse;
+
+            /*The justify-content property
+            is used to align the flex items:*/
+            /*--------------------------*/
+            /*justify-content: center;*/
+            /*--------------------------*/
+            /*The flex-start value aligns the flex items
+            at the beginning of the container
+             (this is default):*/
+            /*--------------------------*/
+            /*justify-content: flex-start;*/
+            /*justify-content: flex-end;*/
+            /*--------------------------*/
+            /*The space-around value displays the
+            flex items with space before, between,
+             and after the lines:*/
+            /*--------------------------*/
+            justify-content: space-around;
+            /*justify-content: space-between;*/
+            /*justify-content: space-evenly;*/
+        }
+
+        .flex-container > div,
+        .flex-container2 > div,
+        .flex-container3 > div,
+        .flex-container4 > div,
+        .flex-container5 > div,
+        .flex-container6 > div {
+            background-color: white;
+            margin: 10px;
+            padding: 30px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .flex-container2 {
+            background-color: #4caf50;
+            height: 300px;
+            display: flex;
+
+            /*The center value aligns the
+            flex items in the middle of the container:*/
+            /*--------------------------*/
+            /*align-items: center;*/
+            align-items: flex-end;
+            /*--------------------------*/
+            /*The stretch value stretches the flex items
+            to fill the container (this is default):*/
+            /*--------------------------*/
+            /*align-items: stretch;*/
+
+        }
+
+        .flex-container2 > div {
+            background-color: white;
+            margin: 10px;
+            padding: 30px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .flex-container3 {
+            background-color: dodgerblue;
+            height: 300px;
+            display: flex;
+
+            /*align-items: center;*/
+            /*align-items: baseline;*/
+            align-items: stretch;
+        }
+
+        .flex-container4 {
+            background-color: #4caf50;
+            height: 300px;
+            display: flex;
+
+            /*align-items: center;*/
+            /*align-items: baseline;*/
+            align-items: stretch;
+        }
+
+        .flex-container5 {
+            background-color: dodgerblue;
+            height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+
+            /*The align-content property is
+            used to align the flex lines.*/
+            /*--------------------------*/
+            /*align-content: space-around;*/
+            /*align-content: space-evenly;*/
+            /*--------------------------*/
+            /*The stretch value stretches the flex
+            lines to take up the remaining space
+            (this is default):*/
+            /*--------------------------*/
+            /*align-content: stretch;*/
+            /*align-content: center;*/
+            align-content: flex-end;
+        }
+
+        .flex-container6 {
+            background-color: #4caf50;
+            display: flex;
+            height: 300px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+<h2>flex-flow(flex-direction,flex-wrap),justify-content:</h2>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+</div>
+<h2>align-items:</h2>
+<div class="flex-container2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+</div>
+<h3>flex items with different height:</h3>
+<div class="flex-container3">
+    <div style="height: 80px">1</div>
+    <div style="height: 100px">2</div>
+    <div style="height: 50px">3</div>
+    <div style="height: 180px">4</div>
+    <div style="height: 120px">5</div>
+</div>
+<h3>flex items with different font-size:</h3>
+<div class="flex-container4">
+    <div><h3>1</h3></div>
+    <div><h1>2</h1></div>
+    <div><h2>3</h2></div>
+    <div><h4>4</h4></div>
+    <div><h5>5</h5></div>
+</div>
+<h2>align-content:</h2>
+<div class="flex-container5">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+</div>
+<h2>center an element:</h2>
+<div class="flex-container6">
+    <div>是的，我被居中了！</div>
+</div>
+
+</body>
+</html>

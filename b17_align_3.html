@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .d1,.d2 {
+            margin-bottom: 30px;
+        }
+        .d1 {
+            height: 200px;
+            position: relative;
+            border: solid 3px green;
+        }
+
+        .dp p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .d2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            border: solid 3px green;
+        }
+    </style>
+</head>
+<body>
+<div class="d1 dp">
+    <p>
+        一段文字，一段文字，一段文字<br>
+        2段文字，2段文字，2段文字
+    </p>
+</div>
+
+<div class="d2">
+    <p>
+        一段文字，一段文字，一段文字<br>
+        2段文字，2段文字，2段文字
+    </p>
+</div>
+</body>
+</html>

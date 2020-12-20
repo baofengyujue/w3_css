@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .d1 p {
+            text-decoration: underline;
+        }
+
+        .d1 > p {
+            color: red;
+        }
+
+        .d1 + p {
+            text-decoration: line-through;
+        }
+
+        .d1 ~ p {
+            color: blue;
+        }
+
+        .d1, .d2 {
+            padding: 20px;
+            border: solid 1px gray;
+        }
+
+    </style>
+</head>
+<body>
+<p>IIIIIIIIIIIIIIIIIIIIIIIII</p>
+<p>HHHHHHHHHHHHHHHHHHHHHHHHH</p>
+<div class="d1">
+    <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+    <div class="d2">
+        <p>BBBBBBBBBBBBBBBBBBBBBBBBBB</p>
+    </div>
+    <p>FFFFFFFFFFFFFFFFFFFFFFFFFFF</p>
+    <p>GGGGGGGGGGGGGGGGGGGGGGGGGGG</p>
+</div>
+<p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+<p>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+<p>EEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .flex-container {
+            background-color: #eee;
+            display: flex;
+        }
+
+        .flex-container>div {
+            background-color: dodgerblue;
+            margin: 10px;
+            padding: 30px;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .c1 > div {
+            width: 300px;
+        }
+
+        .c2 > div {
+            width: 300px;
+        }
+
+        .c3 {
+            height: 300px;
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+<h2>order:</h2>
+<div class="flex-container">
+    <div style="order: 3">1</div>
+    <div style="order: 2">2</div>
+    <div style="order: 4">3</div>
+    <div style="order: 1">4</div>
+</div>
+<h2>flex-grow:</h2>
+<p>
+    The flex-grow property specifies how much a
+    flex item will grow relative to the rest of
+    the flex items.
+</p>
+<div class="flex-container">
+    <div style="flex-grow: 1">1</div>
+    <div style="flex-grow: 1">2</div>
+    <div style="flex-grow: 2">3</div>
+    <div style="flex-grow: 8">4</div>
+</div>
+<h2>flex-shrink:</h2>
+<p>
+    The flex-shrink property specifies how much a flex
+    item will shrink relative to the rest of the flex items.
+</p>
+<div class="flex-container c1">
+    <div>1</div>
+    <div style="flex-shrink: 0">2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div>
+<h2>flex-basis:</h2>
+<p>
+    The flex-basis property specifies the
+    initial length of a flex item.
+</p>
+<div class="flex-container">
+    <div>1</div>
+    <div style="flex-basis: 300px;">2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div>
+<h2>flex property:</h2>
+<p>
+    The flex property is a shorthand property for
+    the flex-grow, flex-shrink, and flex-basis properties.
+</p>
+<ul>
+    <li>
+        the first value is flex-grow. Giving this a
+        positive value means the item can grow.
+    </li>
+    <li>
+        The second is flex-shrink — with a positive
+        value the items can shrink, but
+        only if their total values overflow the main axis.
+    </li>
+    <li>
+        The final value is flex-basis;
+        this is the value the items are using as
+        their base value to grow and shrink from.
+    </li>
+</ul>
+<div class="flex-container c2">
+    <div>1</div>
+    <div>2</div>
+    <div style="flex: 0 0 300px;">3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div>
+<h2>align-self:</h2>
+<p>
+    The align-self property overrides the
+    default alignment set by the container's
+    align-items property.
+</p>
+<div class="flex-container c3">
+    <div>1</div>
+    <div>2</div>
+    <div style="align-self: stretch">3</div>
+    <div style="align-self: flex-start">4</div>
+    <div style="align-self: center">5</div>
+    <div style="align-self: baseline">6</div>
+</div>
+</body>
+</html>

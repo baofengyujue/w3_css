@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            margin-bottom: 20px;
+        }
+
+        .d1 {
+            border: solid 3px green;
+            padding: 20px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .i1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .d2, .d3 {
+            width: 300px;
+            border: solid 3px green;
+            padding: 20px;
+        }
+
+        .d2 {
+            position: absolute;
+            right: 0px;
+        }
+
+        .d3 {
+            float: right;
+        }
+
+        .p1, .p2 {
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+<div class="d1">
+    center me
+</div>
+
+<img class="i1" src="./imgs/L1_伯伯和欣怡纸花棚中-150.png" alt="">
+
+<div class="d2">
+    position Right align me
+</div>
+
+<p></p>
+<p class="p2">
+    验证如下的结论 <br>
+    Absolute positioned elements are removed from the normal flow,
+    and can overlap elements.
+</p>
+
+<div class="d3">
+    float Right align me
+</div>
+<p class="p1">
+    可以看到 <br>
+    浮动元素也不在页面正常流当中，只是文字的话还是会为其让位
+</p>
+
+</body>
+</html>

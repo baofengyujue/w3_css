@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c1 {
+            /*从分号前开始tab展开*/
+            /*这里不加分号的话后面的无法展开*/
+            m;
+            m10;
+            m10-20;
+            m-10--20;
+            m10-20-30;
+            m-10--20--30;
+            m10-20-30-40;
+            /*小数的话，默认em为单位*/
+            m10.5;
+            m10rem;
+            m10cm;
+            m10.5--20pt-30-40vh;
+
+            m10em;
+            m10e;
+
+            m10%;
+            m10p;
+
+            c#1;
+            c#e0;
+            c#fc2;
+
+            lh;
+            lh2;
+            fw200;
+
+            p!+m10e!;
+
+            ov;
+        }
+    </style>
+</head>
+<body>
+Child:>
+div>ul>li
+
+Sibling:+
+div+p+p
+
+Climb-up:^
+div+div>p>span+em
+div+div>p>span+em^bq
+div>p^p
+same as:
+div>p^+p
+note:bq will expand to blockquote
+
+Multiplication:*
+ul>li*5
+ul>li*3>a
+
+Grouping:()
+div>(ul>li*3>a)+p*2
+div>(ul>li*3>a)^p*2
+(div>(p.a+p.b)*3)+a>img
+
+div.c1.c2.c3
+div#a
+div[age=25]
+div[title='hello world' name=jack]
+
+a$*5
+ul>li.item$*5
+ul>li.item$$$*5
+ul>li.item$@-*5
+ul>li.item$@3*5
+ul>li.item$@-3*5
+
+Text:{}
+a{click me}
+a>{click me}
+p>{click }+a{here}+{ to continue.}
+div{$@4}*3
+
+Implicit tag name
+.content
+.aa.bb
+
+lorem100 will generate a 100-words dummy text.
+lorem10
+lorem20
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .flex-container {
+            background-color: #eee;
+            display: flex;
+        }
+        .flex-container>div {
+            background-color: dodgerblue;
+            margin: 10px;
+            padding: 30px;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .c1 > div {
+            width: 100px;
+        }
+        .c1 .one {
+            /*flex: initial is the same as flex: 0 1 auto*/
+            /*In this case the value of flex-grow is 0,
+             so items will not grow larger than their
+             flex-basis size. The value of flex-shrink
+             is 1, so items can shrink if they need to
+             rather than overflowing. The value of
+              flex-basis is auto. Items will either use
+              any size set on the item in the main
+              dimension, or they will get their size from
+              the content size.*/
+            flex: initial;
+        }
+        .c1 .one-e {
+            flex: 0 1 auto;
+        }
+
+        .c1 .two {
+            /*flex: auto is the same as using flex: 1 1 auto*/
+            /* everything is as with flex:initial
+            but in this case the items can grow and
+             fill the container as well as
+             shrink if required.*/
+            flex: auto;
+        }
+        .c1 .two-e {
+            flex: 1 1 auto;
+        }
+
+        .c1 .three {
+            /*Using flex: none will create fully
+            inflexible flex items.
+            It is as if you wrote flex: 0 0 auto.
+            The items cannot grow or shrink but will be laid out
+            using flexbox with a flex-basis of auto.*/
+            flex: none;
+        }
+        .c1 .three-e {
+            flex: 0 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="flex-container c1">
+    <div class="one"></div>
+    <div class="one-e"></div>
+    <div class="two"></div>
+    <div class="two-e"></div>
+    <div class="three"></div>
+    <div class="three-e"></div>
+</div>
+<p>different after added text:</p>
+<div class="flex-container c1">
+    <div class="one">can shrink,cannot grow</div>
+    <div class="one-e"></div>
+    <div class="two">can shrink,can grow</div>
+    <div class="two-e"></div>
+    <div class="three">cannot shrink,cannot grow</div>
+    <div class="three-e"></div>
+</div>
+
+<p>
+    the flex value reflects the grow/shrink 'rate',
+    not the ratio! <br>the lager the screen, the ratio
+    more close to the flex set value.
+</p>
+<div class="flex-container c2">
+    <div style="flex: 5">5</div>
+    <div style="flex: 50">50</div>
+</div>
+<!--flex: x; is same as flex: x x 0;-->
+<!--The items can grow and shrink from a flex-basis of 0.-->
+<!--这个0还是不明白什么意思，总之就是元素本来多大就是多大-->
+
+<div class="flex-container c2">
+    <div style="flex: 5 5 0">5</div>
+    <div style="flex: 50 50 0">50</div>
+</div>
+<div class="flex-container c2">
+    <div style="flex: 5 5 0">50000000</div>
+    <div style="flex: 50 50 0">50</div>
+</div>
+<div class="flex-container c2">
+    <div style="flex: 5">50000000</div>
+    <div style="flex: 50">50</div>
+</div>
+<div class="flex-container c2">
+    <div style="flex: 5">5</div>
+    <div style="flex: 50">50</div>
+    <div style="flex: 50">50</div>
+    <div style="flex: 50">50</div>
+    <div style="flex: 50">50</div>
+    <div style="flex: 50">50</div>
+    <div style="flex: 50">50</div>
+    <div style="flex: 50">50</div>
+</div>
+
+<div class="flex-container c2">
+    <div style="flex: 2">2</div>
+    <div style="flex: 50">50</div>
+    <div style="flex: 50">50</div>
+    <div style="flex: 10">10</div>
+</div>
+<div class="flex-container c2">
+    <div style="flex: 1">1</div>
+    <div style="flex: 25">25</div>
+    <div style="flex: 25">25</div>
+    <div style="flex: 5">5</div>
+</div>
+<div class="flex-container c2">
+    <div style="flex: 2">2</div>
+    <div style="flex: 5">5</div>
+    <div style="flex: 5">5</div>
+    <div style="flex: 10">10</div>
+</div>
+<p>
+    not set flex value:
+</p>
+<div class="flex-container">
+    <div style="">-</div>
+    <div style="">-</div>
+    <div style="flex: 1">1</div>
+</div>
+<div class="flex-container">
+    <div style="">-</div>
+    <div style="">-</div>
+    <div style="flex: 2">2</div>
+</div>
+
+
+<p>
+    use:
+</p>
+<div class="flex-container">
+    <div style="flex: 1">1</div>
+    <div style="flex: 1">1</div>
+    <div style="flex: 2">2</div>
+</div>
+<div class="flex-container">
+    <div style="flex: 1">1</div>
+    <div style="flex: 1">1</div>
+    <div style="flex: 4">4</div>
+</div>
+
+</body>
+</html>
